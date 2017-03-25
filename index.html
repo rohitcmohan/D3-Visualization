@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>D3 Lab1 CSE564</title>
+    <script type="text/javascript" src="//d3js.org/d3.v3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/d3.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="src/jquery.csv.min.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+	<script src="https://d3js.org/d3-axis.v1.min.js"></script>
+    <style>
+    div.bar {
+        display: inline-block;
+        width: 20px;
+        height: 75px; /* We'll override height later */
+        background-color: teal;
+        margin-right: 2px;
+        opacity: 1;
+      }
+    .d3-tip {
+      line-height: 2;
+      font-weight: normal;
+      font-family: Arial;
+      padding: 12px;
+      background: rgba(125, 125, 125, 0.8);
+      color: white;
+      border-radius: 5px;
+      font-size: 12px!important;
+    }
+    .arc text {
+      font: 10px sans-serif;
+      text-anchor: middle;
+    }
+    .arc path {
+      stroke: #fff;
+    }
+    .node {
+      fill: #000;
+      stroke: #fff;
+      stroke-width: 1.5px;
+    }
+    .link {
+      stroke: #aaa;
+      stroke-width: 1.5px;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="buttons">
+    <button id="pie">To Pie</button>
+    <button id="bar">To Bar</button>
+    <button id="graph">To Graph</button>
+    </div>
+    <div>
+      <p>Bar Chart Options</p>
+    <select id = "optsBar" value='hide/show'>
+      <option value="id1">Deaths</option>
+      <option value="id2">Rural</option>
+      <option value="id3">Popden</option>
+      <option value="id4" selected="selected">Temperature</option>
+      <option value="id5">Drivers</option>
+      <option value="id6">Fuel</option>
+      <!-- and so on... -->
+    </select>
+    <p>Pie Chart Options</p>
+    <select id = "optsPie" value='hide/show'>
+      <option value="id1">Deaths</option>
+      <option value="id2">Rural</option>
+      <option value="id3">Popden</option>
+      <option value="id4" selected="selected">Temperature</option>
+      <option value="id5">Drivers</option>
+      <option value="id6">Fuel</option>
+      <!-- and so on... -->
+    </select>
+    <p>Graph Options</p>
+    <select id = "optsGraph" value='hide/show'>
+      <option value="idg1">20</option>
+      <option value="idg2">40</option>
+      <option value="idg3">60</option>
+      <option value="idg4" selected="selected">80</option>
+      <option value="idg5">100</option>
+      <option value="idg6">120</option>
+      <!-- and so on... -->
+    </select>
+  </div>
+  <svg width="960" height="600"></svg>
+    <script type="text/javascript" src="js/d3Elements.js"></script>
+    <script type="text/javascript" src="js/d3update.js"></script>
+    <script type="text/javascript" src="js/d3Pie.js"></script>
+    <script type="text/javascript" src="js/d3Graph.js"></script>
+  </body>
+</html>
